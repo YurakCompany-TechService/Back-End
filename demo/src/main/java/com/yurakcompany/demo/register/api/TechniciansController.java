@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/v1/technicians")
+@CrossOrigin
 public class TechniciansController {
     private final TechnicianService technicianService;
     private final TechnicianMapper mapper;
