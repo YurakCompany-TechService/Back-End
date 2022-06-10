@@ -1,6 +1,5 @@
 package com.yurakcompany.demo.shared.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -17,5 +16,6 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
     @Column(name = "phone", nullable = false)
-    private Long phone;
+    private int phone;
+
 }

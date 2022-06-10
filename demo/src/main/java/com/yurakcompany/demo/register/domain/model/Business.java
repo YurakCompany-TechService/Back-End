@@ -13,28 +13,23 @@ import javax.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="technicians")
-public class Technician extends User {
+@Table(name = "business")
+public class Business extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotNull
     @NotBlank
-    private String firstName;
+    private String subscription;
     @NotNull
     @NotBlank
-    private String lastName;
+    private String name;
+    @NotNull
+    private int creditCard;
+    @NotNull
+    private int cvv;
     @NotNull
     @NotBlank
-    private String gender;
-    @NotNull
-    @NotBlank
-    private String brand;
-    @NotNull
-    @NotBlank
-    private String area;
-    @NotBlank
-    @NotNull
     private String type;
 }

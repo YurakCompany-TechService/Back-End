@@ -8,4 +8,7 @@ public class MappingConfiguration {
     @Bean TechnicianMapper technicianMapper(){
         return new TechnicianMapper();
     }
+    @Bean BusinessMapper businessMapper(){
+        return new BusinessMapper();
+    }
 }
