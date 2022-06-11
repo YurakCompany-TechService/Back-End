@@ -36,4 +36,8 @@ public class TechnicianServiceImpl implements TechnicianService {
             throw new ResourceValidationException(ENTITY, violations);
         return technicianRepository.save(technician);
     }
+    @Override
+    public Technician getAccount(String email, String password){
+        return technicianRepository.findByEmailAndPassword(email, password);
+    }
 }

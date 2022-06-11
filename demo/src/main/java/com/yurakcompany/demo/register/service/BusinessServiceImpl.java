@@ -5,6 +5,7 @@ import com.yurakcompany.demo.register.domain.persistence.BusinessRepository;
 import com.yurakcompany.demo.register.domain.service.BusinessService;
 import com.yurakcompany.demo.shared.exception.ResourceNotFoundException;
 import com.yurakcompany.demo.shared.exception.ResourceValidationException;
+import org.hibernate.id.BulkInsertionCapableIdentifierGenerator;
 import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintViolation;
@@ -34,5 +35,9 @@ public class BusinessServiceImpl implements BusinessService {
         if (!violations.isEmpty())
             throw new ResourceValidationException(ENTITY, violations);
         return businessRepository.save(business);
+    }
+    @Override
+    public Business getAccount(String email, String password){
+        return businessRepository.findByEmailAndPassword(email, password);
     }
 }

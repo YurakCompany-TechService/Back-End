@@ -5,4 +5,6 @@ import com.yurakcompany.demo.register.domain.model.Business;
 public interface BusinessService {
     Business getById(Long id);
     Business create(Business business);
+
+    Business getAccount(String email, String password);
 }

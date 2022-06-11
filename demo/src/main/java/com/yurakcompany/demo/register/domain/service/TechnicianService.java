@@ -8,4 +8,6 @@ import java.util.List;
 public interface TechnicianService {
     Technician getById(Long id);
     Technician create(Technician technician);
+
+    Technician getAccount(String email, String password);
 }
