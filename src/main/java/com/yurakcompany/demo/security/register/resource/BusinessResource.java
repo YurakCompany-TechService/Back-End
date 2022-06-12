@@ -1,4 +1,4 @@
-package com.yurakcompany.demo.register.resource;
+package com.yurakcompany.demo.security.register.resource;
 
 import lombok.*;
 

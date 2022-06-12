@@ -1,4 +1,4 @@
-package com.yurakcompany.demo.register.resource;
+package com.yurakcompany.demo.security.register.resource;
 
 import lombok.*;
 
@@ -8,29 +8,23 @@ import javax.validation.constraints.NotNull;
 @Getter
 @Setter
 @With
-@NoArgsConstructor
 @AllArgsConstructor
-public class CreateTechnicianResource {
+@NoArgsConstructor
 
+public class CreateBusinessResource {
     @NotNull
     @NotBlank
-    private String firstName;
+    private String subscription;
     @NotNull
     @NotBlank
-    private String lastName;
+    private String name;
+    @NotNull
+    private int creditCard;
+    @NotNull
+    private int cvv;
     @NotNull
     @NotBlank
-    private String gender;
-    @NotNull
-    @NotBlank
-    private String brand;
-    @NotNull
-    @NotBlank
-    private String area;
-    @NotBlank
-    @NotNull
     private String type;
-
     //User
     @NotNull
     @NotBlank

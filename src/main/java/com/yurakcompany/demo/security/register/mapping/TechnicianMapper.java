@@ -1,8 +1,8 @@
-package com.yurakcompany.demo.register.mapping;
+package com.yurakcompany.demo.security.register.mapping;
 
-import com.yurakcompany.demo.register.domain.model.Technician;
-import com.yurakcompany.demo.register.resource.CreateTechnicianResource;
-import com.yurakcompany.demo.register.resource.TechnicianResource;
+import com.yurakcompany.demo.security.register.domain.model.Technician;
+import com.yurakcompany.demo.security.register.resource.CreateTechnicianResource;
+import com.yurakcompany.demo.security.register.resource.TechnicianResource;
 import com.yurakcompany.demo.shared.mapping.EnhancedModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 

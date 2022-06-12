@@ -1,9 +1,9 @@
-package com.yurakcompany.demo.register.api;
+package com.yurakcompany.demo.security.register.api;
 
-import com.yurakcompany.demo.register.domain.service.TechnicianService;
-import com.yurakcompany.demo.register.mapping.TechnicianMapper;
-import com.yurakcompany.demo.register.resource.CreateTechnicianResource;
-import com.yurakcompany.demo.register.resource.TechnicianResource;
+import com.yurakcompany.demo.security.register.domain.service.TechnicianService;
+import com.yurakcompany.demo.security.register.mapping.TechnicianMapper;
+import com.yurakcompany.demo.security.register.resource.CreateTechnicianResource;
+import com.yurakcompany.demo.security.register.resource.TechnicianResource;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

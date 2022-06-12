@@ -1,4 +1,4 @@
-package com.yurakcompany.demo.register.domain.model;
+package com.yurakcompany.demo.security.register.domain.model;
 
 import com.yurakcompany.demo.shared.domain.model.User;
 import lombok.*;
