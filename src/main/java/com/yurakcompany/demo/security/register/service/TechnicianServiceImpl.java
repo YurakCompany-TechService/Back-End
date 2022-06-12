@@ -33,6 +33,10 @@ public class TechnicianServiceImpl implements TechnicianService {
         Set<ConstraintViolation<Technician>>violations = validator.validate(technician);
         if (!violations.isEmpty())
             throw new ResourceValidationException(ENTITY, violations);
+        if (technicianRepository.findByFirstNameAndLastName(technician.getFirstName(), technician.getLastName())!=null)
+            throw new ResourceValidationException(ENTITY, "The name of the technician already exists");
+        if (technicianRepository.findByEmail(technician.getEmail()) != null)
+            throw new ResourceValidationException(ENTITY, "Email already exists");
         return technicianRepository.save(technician);
     }
     @Override

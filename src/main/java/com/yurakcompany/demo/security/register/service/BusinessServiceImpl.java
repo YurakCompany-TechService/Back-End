@@ -33,6 +33,10 @@ public class BusinessServiceImpl implements BusinessService {
         Set<ConstraintViolation<Business>> violations = validator.validate(business);
         if (!violations.isEmpty())
             throw new ResourceValidationException(ENTITY, violations);
+        if (businessRepository.findByName(business.getName()) != null)
+            throw new ResourceValidationException(ENTITY, "The name of the business already exists");
+        if (businessRepository.findByEmail(business.getEmail()) != null)
+            throw new ResourceValidationException(ENTITY, "Email already exists");
         return businessRepository.save(business);
     }
     @Override
