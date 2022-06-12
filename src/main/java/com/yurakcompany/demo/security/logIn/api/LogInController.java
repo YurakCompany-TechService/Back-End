@@ -18,7 +18,7 @@ public class LogInController {
         this.businessService = businessService;
         this.technicianService = technicianService;
     }
-    @PostMapping("/business")
+    @PostMapping("/businesses")
         public Business getAccountBusiness(@RequestBody AccountResource resource){
             if (businessService.getAccount(resource.getEmail(), resource.getPassword()) != null){
                 System.out.println(businessService.getAccount(resource.getEmail(), resource.getPassword()));

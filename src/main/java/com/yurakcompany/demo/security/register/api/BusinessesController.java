@@ -7,8 +7,8 @@ import com.yurakcompany.demo.security.register.resource.CreateBusinessResource;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-    @RequestMapping("/api/v1/businesses")
-    @CrossOrigin
+@RequestMapping("/api/v1/businesses")
+@CrossOrigin
     public class BusinessesController {
         private final BusinessService businessService;
     private final BusinessMapper mapper;
