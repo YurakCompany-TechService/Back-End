@@ -1,7 +1,7 @@
 package com.yurakcompany.demo.notification.resource;
 
-import com.yurakcompany.demo.register.resource.BusinessResource;
-import com.yurakcompany.demo.register.resource.TechnicianResource;
+import com.yurakcompany.demo.security.register.resource.BusinessResource;
+import com.yurakcompany.demo.security.register.resource.TechnicianResource;
 import lombok.*;
 
 @Getter

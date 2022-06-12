@@ -1,6 +1,6 @@
 package com.yurakcompany.demo.portfolio.domain.model;
 
-import com.yurakcompany.demo.register.domain.model.Technician;
+import com.yurakcompany.demo.security.register.domain.model.Technician;
 import lombok.*;
 
 import javax.persistence.*;
