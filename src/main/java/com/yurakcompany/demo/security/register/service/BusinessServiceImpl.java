@@ -1,11 +1,10 @@
-package com.yurakcompany.demo.register.service;
+package com.yurakcompany.demo.security.register.service;
 
-import com.yurakcompany.demo.register.domain.model.Business;
-import com.yurakcompany.demo.register.domain.persistence.BusinessRepository;
-import com.yurakcompany.demo.register.domain.service.BusinessService;
+import com.yurakcompany.demo.security.register.domain.model.Business;
+import com.yurakcompany.demo.security.register.domain.persistence.BusinessRepository;
+import com.yurakcompany.demo.security.register.domain.service.BusinessService;
 import com.yurakcompany.demo.shared.exception.ResourceNotFoundException;
 import com.yurakcompany.demo.shared.exception.ResourceValidationException;
-import org.hibernate.id.BulkInsertionCapableIdentifierGenerator;
 import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintViolation;
@@ -34,6 +33,10 @@ public class BusinessServiceImpl implements BusinessService {
         Set<ConstraintViolation<Business>> violations = validator.validate(business);
         if (!violations.isEmpty())
             throw new ResourceValidationException(ENTITY, violations);
+        if (businessRepository.findByName(business.getName()) != null)
+            throw new ResourceValidationException(ENTITY, "The name of the business already exists");
+        if (businessRepository.findByEmail(business.getEmail()) != null)
+            throw new ResourceValidationException(ENTITY, "Email already exists");
         return businessRepository.save(business);
     }
     @Override

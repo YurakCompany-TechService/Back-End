@@ -1,15 +1,14 @@
-package com.yurakcompany.demo.register.service;
+package com.yurakcompany.demo.security.register.service;
 
-import com.yurakcompany.demo.register.domain.model.Technician;
-import com.yurakcompany.demo.register.domain.persistence.TechnicianRepository;
-import com.yurakcompany.demo.register.domain.service.TechnicianService;
+import com.yurakcompany.demo.security.register.domain.model.Technician;
+import com.yurakcompany.demo.security.register.domain.persistence.TechnicianRepository;
+import com.yurakcompany.demo.security.register.domain.service.TechnicianService;
 import com.yurakcompany.demo.shared.exception.ResourceNotFoundException;
 import com.yurakcompany.demo.shared.exception.ResourceValidationException;
 import org.springframework.stereotype.Service;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
-import java.util.List;
 import java.util.Set;
 
 @Service
@@ -34,6 +33,10 @@ public class TechnicianServiceImpl implements TechnicianService {
         Set<ConstraintViolation<Technician>>violations = validator.validate(technician);
         if (!violations.isEmpty())
             throw new ResourceValidationException(ENTITY, violations);
+        if (technicianRepository.findByFirstNameAndLastName(technician.getFirstName(), technician.getLastName())!=null)
+            throw new ResourceValidationException(ENTITY, "The name of the technician already exists");
+        if (technicianRepository.findByEmail(technician.getEmail()) != null)
+            throw new ResourceValidationException(ENTITY, "Email already exists");
         return technicianRepository.save(technician);
     }
     @Override

@@ -1,9 +1,8 @@
-package com.yurakcompany.demo.register.resource;
+package com.yurakcompany.demo.security.register.resource;
 
 import lombok.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 @Getter
 @Setter
@@ -19,8 +18,10 @@ public class CreateBusinessResource {
     @NotBlank
     private String name;
     @NotNull
+    @Digits(integer = 16, fraction = 0)
     private int creditCard;
     @NotNull
+    @Digits(integer = 3, fraction = 0)
     private int cvv;
     @NotNull
     @NotBlank
@@ -33,5 +34,6 @@ public class CreateBusinessResource {
     @NotBlank
     private String password;
     @NotNull
+    @Digits(integer = 9, fraction = 0)
     private int phone;
 }

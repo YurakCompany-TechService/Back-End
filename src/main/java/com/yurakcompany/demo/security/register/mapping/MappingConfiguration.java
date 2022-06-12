@@ -1,4 +1,4 @@
-package com.yurakcompany.demo.register.mapping;
+package com.yurakcompany.demo.security.register.mapping;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

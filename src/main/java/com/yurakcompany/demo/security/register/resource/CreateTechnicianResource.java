@@ -1,9 +1,8 @@
-package com.yurakcompany.demo.register.resource;
+package com.yurakcompany.demo.security.register.resource;
 
 import lombok.*;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.*;
 
 @Getter
 @Setter
@@ -39,5 +38,6 @@ public class CreateTechnicianResource {
     @NotBlank
     private String password;
     @NotNull
+    @Digits(integer = 9, fraction = 0)
     private int phone;
 }
