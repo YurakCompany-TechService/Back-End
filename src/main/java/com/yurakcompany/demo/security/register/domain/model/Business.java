@@ -13,7 +13,7 @@ import javax.validation.constraints.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "business")
+@Table(name = "businesses")
 public class Business extends User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
