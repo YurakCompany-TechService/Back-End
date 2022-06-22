@@ -3,7 +3,7 @@ package com.yurakcompany.demo.contract.service;
 import com.yurakcompany.demo.contract.domain.model.Contract;
 import com.yurakcompany.demo.contract.domain.persistence.ContractRepository;
 import com.yurakcompany.demo.contract.domain.service.ContractService;
-import com.yurakcompany.demo.register.domain.persistence.BusinessRepository;
+import com.yurakcompany.demo.security.register.domain.persistence.BusinessRepository;
 import com.yurakcompany.demo.shared.exception.ResourceNotFoundException;
 import com.yurakcompany.demo.shared.exception.ResourceValidationException;
 import org.springframework.http.ResponseEntity;

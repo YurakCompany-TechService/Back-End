@@ -1,6 +1,6 @@
 package com.yurakcompany.demo.contract.resource;
 
-import com.yurakcompany.demo.register.resource.BusinessResource;
+import com.yurakcompany.demo.security.register.resource.BusinessResource;
 import lombok.*;
 
 @Getter
