@@ -1,10 +1,8 @@
 package com.yurakcompany.demo.qualification.domain.model;
 
-import com.yurakcompany.demo.contract.domain.model.Contract;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Getter
