@@ -1,8 +1,8 @@
 package com.yurakcompany.demo.qualification.domain.model;
 
 import com.yurakcompany.demo.contract.domain.model.Contract;
-import com.yurakcompany.demo.register.domain.model.Business;
-import com.yurakcompany.demo.register.domain.model.Technician;
+import com.yurakcompany.demo.security.register.domain.model.Business;
+import com.yurakcompany.demo.security.register.domain.model.Technician;
 import lombok.*;
 
 import javax.persistence.*;
