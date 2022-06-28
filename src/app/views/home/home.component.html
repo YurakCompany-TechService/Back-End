@@ -1,0 +1,75 @@
+<section id="presentation">
+  <div [class]="img">
+    <mat-card>
+      <a mat-button (click)="img='img-business'"><mat-card-title>Business</mat-card-title></a>
+      <a mat-button (click)="img='img-technician'"><mat-card-title>Technician</mat-card-title></a>
+      <div *ngIf="img === 'img-business'">
+        <mat-card-title>Request your technical service</mat-card-title>
+        <mat-card-subtitle >Navigate in the platform that has the largest amount of professional technicians</mat-card-subtitle>
+        <button mat-button [routerLink]="'/sign-up-business'">Register to order</button>
+      </div>
+      <div *ngIf="img === 'img-technician'">
+        <mat-card-title>Have a quick and stable work</mat-card-title>
+        <mat-card-subtitle>Have a good communication with different types of business</mat-card-subtitle>
+        <button mat-button [routerLink]="'/sign-up'">Register to work</button>
+      </div>
+    </mat-card>
+  </div>
+</section>
+<section id="testimonials">
+  <h1>Testimonials</h1>
+    <carousel [cellsToShow]="3" [height]="500" [width]="1250"
+              [autoplay]="true" [margin]="0" [autoplayInterval]="3000" [pauseOnHover]="false" [arrowsTheme]="'dark'">
+
+      <div class="carousel-cell">
+        <mat-card>
+          <mat-card-title>Julio Barrios</mat-card-title>
+          <mat-card-subtitle>Computer Technician</mat-card-subtitle>
+          <mat-card-content>
+            <img mat-card-image src="http://1.bp.blogspot.com/-DoSZ7I4k8KA/UqSnGIzdRKI/AAAAAAAANcw/i_uZYmEoTFk/s1600/cortes-para-hombres-con-cabello-rizado-2.jpg">
+            <q>Fortunately, I have recently found a really good job. It brings the best quality service.</q>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="carousel-cell">
+        <mat-card>
+          <mat-card-title>Miguel Macedo</mat-card-title>
+          <mat-card-subtitle>Computer Technician</mat-card-subtitle>
+          <mat-card-content>
+            <img mat-card-image src="https://ath2.unileverservices.com/wp-content/uploads/sites/11/2021/03/17172909/cortes-de-pelo-para-hombres-con-rulos-23.jpg">
+            <q>lorem wefihwqeoifhwefqwehfoqwhf qwfoqwe hfwefhqweou fhqwoufh qweofuqhwefouwqhdfouqw</q>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="carousel-cell">
+        <mat-card>
+          <mat-card-title>Ana Flores</mat-card-title>
+          <mat-card-subtitle>Phone Technician</mat-card-subtitle>
+          <mat-card-content>
+            <img mat-card-image src="https://static.mujerhoy.com/www/multimedia/202102/28/media/cortadas/Maria-pedraza-instagram-k0pG-U130666686531YHI-624x469@MujerHoy.jpg">
+            <q>Fortunately, I recently found a really good quality job</q>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="carousel-cell">
+        <mat-card>
+          <mat-card-title>Jorge Mercado</mat-card-title>
+          <mat-card-subtitle>VITAL CEO </mat-card-subtitle>
+          <mat-card-content>
+            <img mat-card-image src="https://thumbs.dreamstime.com/b/director-ejecutivo-de-una-empresa-negocios-o-ceo-mirando-la-c%C3%A1mara-en-oficina-soleada-hombre-confianza-con-traje-formal-frente-207184984.jpg">
+            <q>Faster and good service is always assured with this enterprise. My best inversion of the year.</q>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <div class="carousel-cell">
+        <mat-card>
+          <mat-card-title>Sebastian Perez</mat-card-title>
+          <mat-card-subtitle>Promant CEO</mat-card-subtitle>
+          <mat-card-content>
+            <img mat-card-image src="https://images.ecestaticos.com/ln39HtPu7-rwn-8CJfUGQZrARjo=/0x0:1024x576/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2F9de%2Fcc3%2F539%2F9decc35395510946e2fb87efee544f26.jpg">
+            <q>Fwqqfjwiofhweifnwei foifjqwe iofhqweof hwef qwehfowqe hfuoqweh fowef weoif hb</q>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </carousel>
+</section>

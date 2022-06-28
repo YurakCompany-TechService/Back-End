@@ -1,0 +1,52 @@
+<mat-toolbar class="purple">
+  <span>TechService</span>
+  <a *ngIf="!isSignedIn()" mat-button [routerLink]="'/home'">Home</a>
+  <div *ngIf="isSignedIn()">
+    <span *ngIf="getCurrentTargetSegment()==='technician'">
+      <a mat-button  [routerLink]="'/home-technician'">Home</a>
+      <a mat-button  [routerLink]="'/technicians'">Profile</a>
+    </span>
+    <span *ngIf="getCurrentTargetSegment()==='business'">
+      <a mat-button [routerLink]="'/home-business'">Home</a>
+      <a mat-button [routerLink]="'/profile-business'">Profile</a>
+      <a mat-button [routerLink]="'/subscription'">Subscription</a>
+      <a mat-button [routerLink]="'/cases'">Cases</a>
+    </span>
+    <a mat-button (click)="signOut()">Sign-Out</a>
+  </div>
+  <a mat-button [routerLink]="'/help'">Help</a>
+  <a *ngIf="!isSignedIn()" mat-button [routerLink]="'/sign-in'">Sign in</a>
+  <a *ngIf="!isSignedIn()" (click)="openDialog()" mat-button>
+    <div> Sign up</div>
+  </a>
+  <div *ngIf="isSignedIn()" mat-button class="rt-container" >
+    <div class="rt-content">
+      <mat-toolbar class="purple reverse-toolbar">
+        <a mat-button (click)="openDialogNoty()">
+          <img src="../../../assets/notify-icon.png" class="toolbar-icon" alt="">
+        </a>
+      </mat-toolbar>
+    </div>
+  </div>
+</mat-toolbar>
+<router-outlet></router-outlet>
+<footer>
+  <div class="footer-content">
+    <h1>TechService</h1>
+    <p>Copyright &copy; 2022 TechService</p>
+    <ul class="social-links box">
+      <li>
+        <a href=""><mat-icon>facebook</mat-icon></a>
+      </li>
+      <li>
+        <a href=""><mat-icon>whatsapp</mat-icon></a>
+      </li>
+      <li>
+        <a href=""><mat-icon>mail</mat-icon></a>
+      </li>
+      <li>
+        <a href=""><mat-icon>appstore</mat-icon></a>
+      </li>
+    </ul>
+  </div>
+</footer>

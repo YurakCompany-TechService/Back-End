@@ -1,0 +1,45 @@
+<div class="box-container">
+  <form method="post" style="height: 100%">
+    <mat-card class="box-content">
+      <div class="form-content">
+        <div class="form-box">
+          <div>
+            <div>
+              <div class="input-label">Type</div>
+              <mat-form-field appearance="fill">
+                <input class="input-pink" type="text">
+              </mat-form-field>
+            </div>
+            <div>
+              <div class="input-label">Model</div>
+              <mat-form-field appearance="fill">
+                <input class="input-pink" type="text">
+              </mat-form-field>
+            </div>
+            <div>
+              <div class="input-label">Brand</div>
+              <mat-form-field appearance="fill">
+                <input class="input-pink" type="text">
+              </mat-form-field>
+            </div>
+            <div>
+              <div class="input-label">Address</div>
+              <mat-form-field appearance="fill">
+                <input class="input-pink" type="text">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="desc-box">
+          <div>
+            <div class="input-label">Problem description</div>
+            <div class="desc-content">
+                <textarea class="text-area" matInput placeholder="Write the request description"></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="button-1" (click)="create()" mat-button [routerLink]="'/home-business'" mat-raised-button color="primary">Send</button>
+    </mat-card>
+  </form>
+</div>
