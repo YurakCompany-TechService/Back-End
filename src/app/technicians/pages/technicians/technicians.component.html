@@ -1,0 +1,19 @@
+<mat-card class="table-wrapper">
+  <mat-card class="for-title">
+    <h1 style="color: white">
+      My Profile
+    </h1>
+  </mat-card>
+  <mat-card class="for-info">
+    <mat-card-title>Bio:</mat-card-title>
+    <div>Contact email: {{getEmail()}}</div>
+    <div>Firstname: {{getFirstName()}}</div>
+    <div>Lastname: {{getLastName()}}</div>
+    <div>Phone: {{getPhone()}}</div>
+    <div>Gender: {{getGender()}}</div>
+    <div>Area: {{getArea()}}</div>
+    <div>Brand: {{getBrand()}}</div>
+  </mat-card>
+  <button mat-raised-button [routerLink]="'/services-history'" style="left: 830px; ">VIEW SERVICES HISTORY</button>
+  <img class="img-profile" src="assets/tech1.jpg">
+</mat-card>

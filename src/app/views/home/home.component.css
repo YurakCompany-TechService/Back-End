@@ -1,0 +1,84 @@
+.img-business{
+  background-image: url("../../../assets/business.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+}
+.img-technician{
+  background-image: url("../../../assets/technician.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  width: 100%;
+  margin: 0px;
+}
+#presentation mat-card{
+  width: 300px;
+  height: 250px;
+  position: relative;
+  left: 100px;
+  top: 150px;
+  border-radius: 10px;
+  margin: 0px;
+  padding: 0px;
+}
+#presentation mat-card-title{
+  text-align: center;
+  font-weight: bolder;
+  padding:10px 0px;
+  font-size: 20px;
+}
+#presentation mat-card-subtitle{
+  padding: 0px 10px;
+  font-size: 15px;
+  margin: 20px 0px;
+}
+#presentation mat-card button, #presentation mat-card a{
+  width: 50%;
+  background-color: black;
+  color: white;
+  border-radius: 0px;
+}
+#presentation mat-card a:active{
+  background-color: rgba(0, 0, 0, 0.84);
+}
+#presentation mat-card div button{
+  margin: 0px 25%;
+}
+carousel{
+  height: 500px;
+}
+#testimonials mat-card{
+  width: 250px;
+  height: 300px;
+  background-color: black;
+  color: white;
+  position: absolute;
+  top: 100px;
+  left: 70px;
+}
+#testimonials mat-card mat-card-subtitle{
+  color: white;
+  text-align: center;
+}
+#testimonials mat-card-title{
+  text-align: center;
+}
+#testimonials mat-card mat-card-content img{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 20px;
+  padding: 30px 0px;
+}
+#testimonials h1{
+  text-align: center;
+  text-transform: uppercase;
+  color: #593EA5;
+  font-weight: bolder;
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin: 80px 0px 0px 0px;
+}
+#testimonials mat-card mat-card-content{
+  height: 200px;
+}

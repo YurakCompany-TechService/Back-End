@@ -1,0 +1,36 @@
+<!--<h1 mat-dialog-title>Hi {{data.name}}</h1>-->
+<mat-card mat-dialog-content class="modal-body">
+  <form method="post">
+    <div class="modal-content">
+      <mat-card-title class="modal-header">Do you want to upgrade your actual subscription plan?</mat-card-title>
+      <div class="input-box">
+        <div class="input-item">
+          <div class="inner-box">
+            <mat-card-subtitle class="modal-input-label">Actual Payment method</mat-card-subtitle>
+            <input class="input-white" type="text" value="4003  1234   5678   9410">
+          </div>
+        </div>
+        <div class="input-item">
+          <div class="inner-box">
+            <mat-card-subtitle class="modal-input-label">Date</mat-card-subtitle>
+            <input class="input-white" type="date" value="13/02/2025">
+          </div>
+        </div>
+        <div class="input-item">
+          <div class="inner-box">
+            <mat-card-subtitle class="modal-input-label">Security Code</mat-card-subtitle>
+            <input class="input-white" type="password" value="4003">
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button mat-button [routerLink]="'/home-business'" mat-raised-button color="primary">Accept</button>
+      </div>
+    </div>
+  </form>
+  <img src="../../../assets/mans.png" class="modal-back-img">
+</mat-card>
+<!--<div mat-dialog-actions>-->
+<!--  <button mat-button (click)="onNoClick()">No Thanks</button>-->
+<!--  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>-->
+<!--</div>-->
